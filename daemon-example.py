@@ -11,7 +11,9 @@ class MyDaemon(Daemon):
 		while True:
 	    		test = imgprocess.mainComp()
 			if test == True:
-				print "Image has Changed" 
+				print "Image has Changed"
+			else:
+                                imgprocess.switch()
 			time.sleep(15)
 
 if __name__ == "__main__":

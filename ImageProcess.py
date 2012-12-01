@@ -7,9 +7,7 @@ start = '/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg'
 name =  '/home/thelonelygod/Documents/shiny-dangerzone/img1.jpg'
 
 class Capture:
-
-	def getImage1(self,name):
-		
+	def getImage1(self,name):	
 		pygame.image.save(image,name)
 		img = Image.open(name)
 
@@ -26,6 +24,7 @@ class Capture:
 				r,g,b = img.getpixel((s,m))	
 				if g > 150:
 					return True
+
 		return False		
 	
 	def main(self):
@@ -39,7 +38,8 @@ class Capture:
 		image = cam.get_image()
 		pygame.image.save(image,start)
 		cam.stop()
-
+        def switch(self):
+                start = name
 	def mainComp(self):
 		pygame.init()
 		pygame.camera.init()
