@@ -15,12 +15,22 @@ class Capture:
 
 	def compare(self,img1,img2):
 		img = ImageChops.difference(img1,img2)
-		return img
+		xsize , ysize = img.size
+
+		for s in range(0,xsize/3):
+			s=s*3
+			for m in range (0,ysize/3):
+				m=m*3
+				r,g,b = img.getpixel((s,m))	
+				if g > 150
+					return True
+		return False		
+	
 	def main(self,name):
 		pygame.init()
 		pygame.camera.init()
 
-		cam = pygame.camera.Camera("/dev/video0",(640,480))
+		cam = pygame.camera.Camera("/dev/video0",(160,120))
 
 		cam.start()
 

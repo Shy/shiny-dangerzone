@@ -9,7 +9,7 @@ class Daemon:
 	
 	Usage: subclass the Daemon class and override the run() method
 	"""
-	def __init__(self, pidfile, stdin='/dev/null', stdout='/home/thelonelygod/Documents/shiny-dangerzone/raspberry-daemon.log', stderr='/home/thelonelygod/Documents/shiny-dangerzone/raspberry-daemon.err'):
+	def __init__(self, pidfile, stdin='/dev/null', stdout='/temp/shiny-dangerzone/raspberry-daemon.log', stderr='/home/thelonelygod/Documents/shiny-dangerzone/raspberry-daemon.err'):
 		self.stdin = stdin
 		self.stdout = stdout
 		self.stderr = stderr
