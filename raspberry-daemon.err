@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "daemon-example.py", line 20, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 10, in run
+    imgprocess.main('/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg')
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in main
+    end()
+NameError: global name 'end' is not defined

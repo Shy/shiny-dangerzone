@@ -16,6 +16,9 @@ class Capture:
 	def compare(self,img1,img2):
 		img = ImageChops.difference(img1,img2)
 		return img
+	def end(self):
+		
+
 	def main(self,name):
 		pygame.init()
 		pygame.camera.init()
