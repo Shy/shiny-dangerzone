@@ -7,14 +7,15 @@ from ImageProcess import Capture
 class MyDaemon(Daemon):
 	def run(self):
 		imgprocess = Capture()
-		imgprocess.main('/temp/shiny-dangerzone/Start.jpg')
+		imgprocess.main()
 		while True:
-			name = '/temp/shiny-dangerzone/img1.jpg'
-	    		imgprocess.main(name)
+	    		test = imgprocess.mainComp()
+			if test == True:
+				print "Image has Changed" 
 			time.sleep(15)
 
 if __name__ == "__main__":
-	daemon = MyDaemon('/temp/shiny-dangerzone/daemon-example.pid')
+	daemon = MyDaemon('/home/thelonelygod/Documents/shiny-dangerzone/daemon-example.pid')
 	if len(sys.argv) == 2:
 		if 'start' == sys.argv[1]:
 			daemon.start()

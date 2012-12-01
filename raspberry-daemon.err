@@ -8,3 +8,23 @@ Traceback (most recent call last):
   File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in main
     end()
 NameError: global name 'end' is not defined
+Traceback (most recent call last):
+  File "daemon-example.py", line 21, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 12, in run
+    test = imgprocess.mainComp()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 57, in mainComp
+    return compare (img1,img2)		
+NameError: global name 'compare' is not defined
+Traceback (most recent call last):
+  File "daemon-example.py", line 21, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 12, in run
+    test = imgprocess.mainComp()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 57, in mainComp
+    return compare (img1,img2)		
+NameError: global name 'compare' is not defined
