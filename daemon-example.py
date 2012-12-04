@@ -1,23 +1,41 @@
 #!/usr/bin/env python
-
+import Image,ImageChops
+import pygame
+import pygame.camera
+from pygame.locals import *
 import sys, time
 from daemon import Daemon
 from ImageProcess import Capture
 
+import logging
+
 class MyDaemon(Daemon):
         def run(self):
+		logging.info("Hello World")
+		print "Hello World"
+		pygame.init()
+		pygame.camera.init()
+		cam = pygame.camera.Camera("/dev/video0",(160,120))
+
                 imgprocess = Capture()
-                imgprocess.main()
+                imgprocess.main(cam)
                 while True:
-                        test = imgprocess.mainComp()
+                        test = imgprocess.mainComp(cam)
                         if test == True:
-                                print "Image has Changed"
+                                logging.info("Image has Changed")
+				test2 = imgprocess.mainComp(cam)
+				if test2 == True:
+					logging.info("Motion Confirmed")
+					daemon.stop()
+				else:
+					logging.error( "Second Test Fail")
                         else:
                                 imgprocess.switch()
                         time.sleep(15)
 
 if __name__ == "__main__":
         daemon = MyDaemon('/home/thelonelygod/Documents/shiny-dangerzone/daemon-example.pid')
+	logging.basicConfig(filename="/home/thelonelygod/Documents/shiny-dangerzone/shiny-dangerzone.log", level=logging.INFO)
         if len(sys.argv) == 2:
                 if 'start' == sys.argv[1]:
                         daemon.start()
