@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "daemon-example.py", line 41, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 23, in run
+    test = imgprocess.mainComp(cam)
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 39, in mainComp
+    img1 = Image.open(start)
+  File "/usr/lib64/python2.7/site-packages/PIL/Image.py", line 1952, in open
+    fp = __builtin__.open(fp, "rb")
+IOError: [Errno 2] No such file or directory: '/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg'
+Traceback (most recent call last):
+  File "daemon-example.py", line 40, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 32, in run
+    imgprocess.switch()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in switch
+    name.save("/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg")
+AttributeError: 'str' object has no attribute 'save'
+Traceback (most recent call last):
+  File "daemon-example.py", line 40, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 32, in run
+    imgprocess.switch()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in switch
+    name.save("/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg")
+AttributeError: 'str' object has no attribute 'save'
+Traceback (most recent call last):
+  File "daemon-example.py", line 40, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 32, in run
+    imgprocess.switch()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in switch
+    name.save("/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg")
+AttributeError: 'str' object has no attribute 'save'
+Traceback (most recent call last):
+  File "daemon-example.py", line 40, in <module>
+    daemon.start()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/daemon.py", line 85, in start
+    self.run()
+  File "daemon-example.py", line 32, in run
+    imgprocess.switch()
+  File "/home/thelonelygod/Documents/shiny-dangerzone/ImageProcess.py", line 32, in switch
+    name.save("/home/thelonelygod/Documents/shiny-dangerzone/Start.jpg")
+AttributeError: 'str' object has no attribute 'save'

@@ -11,27 +11,27 @@ import logging
 
 class MyDaemon(Daemon):
         def run(self):
-		logging.info("Hello World")
-		print "Hello World"
+		logging.info("Start Up")
 		pygame.init()
 		pygame.camera.init()
 		cam = pygame.camera.Camera("/dev/video0",(160,120))
 
                 imgprocess = Capture()
                 imgprocess.main(cam)
-                while True:
-                        test = imgprocess.mainComp(cam)
+                while testf:
+                        True = imgprocess.mainComp(cam)
                         if test == True:
                                 logging.info("Image has Changed")
 				test2 = imgprocess.mainComp(cam)
-				if test2 == True:
+				if tpest2 == True:
 					logging.info("Motion Confirmed")
 					daemon.stop()
 				else:
-					logging.error( "Second Test Fail")
+					logging.warning( "Second Test Fail")
                         else:
+				logging.info("Image Switch")
                                 imgprocess.switch()
-                        time.sleep(15)
+                        time.sleep(5)
 
 if __name__ == "__main__":
         daemon = MyDaemon('/home/thelonelygod/Documents/shiny-dangerzone/daemon-example.pid')
